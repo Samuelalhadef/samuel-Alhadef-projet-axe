@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Monde Magique de Harry Potter</title>
+    <link rel="stylesheet" href="assets/css/pageaccueil.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+    <header>
+      <div class="contenu">
+        <nav id="nav">
+          <img
+            id="logosite"
+            src="assets/img/Harry logo.png"
+            alt="Logo du site Harry Potter"
+          />
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="booster.html">Booster</a></li>
+            <li><a href="signin.html">Inscription</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section principale avec bouton d'invitation à l'action -->
+    <main>
+      <section id="hero">
+        <h1>Bienvenue dans le Monde Magique de Harry Potter</h1>
+        <p>
+          Explorez le château, découvrez des sorts et trouvez votre maison à
+          Poudlard!
+        </p>
+        <a href="signin.html" class="btn-hero">Commencez l'aventure</a>
+      </section>
+
+      <!-- Container pour les liens interactifs -->
+      <div class="interactive-links-container">
+        <!-- Choixpeau Magique -->
+        <div id="sorting-hat-container">
+          <a href="questionaire.html" id="sorting-hat-link">
+            <img
+              src="assets/img/choixpeau.png"
+              alt="Choixpeau Magique"
+              id="sorting-hat-image"
+            />
+            <div>Dans quelle maison es-tu ?</div>
+          </a>
+        </div>
+
+        <!-- Dragées de Bertie Crochue -->
+        <div id="bertie-beans-container">
+          <a href="dragées_de bertie_crochue.html" id="bertie-beans-link">
+            <img
+              src="assets/img/boite_bonbon.png"
+              alt="Dragées de Bertie Crochue"
+              id="bertie-beans-image"
+            />
+            <div>Dragées de Bertie Crochue</div>
+          </a>
+        </div>
+
+        <!-- Baguettes magiques -->
+        <div id="wand-container">
+          <a href="baguettequiz.html" id="wand-link">
+            <img
+              src="assets/img/baguette.png"
+              alt="Baguette magique"
+              id="wand-image"
+            />
+            <div>Quelle est ta baguette magique ?</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Section À propos -->
+      <section id="about">
+        <h2>À propos de ce site</h2>
+        <p>
+          Ce site est votre portail vers le monde de Harry Potter. Parcourez les
+          différentes sections pour apprendre plus sur les lieux emblématiques,
+          les personnages célèbres et les incroyables sortilèges de l'univers de
+          Harry Potter.
+        </p>
+      </section>
+    </main>
+
+    <!-- Scripts JS -->
+    <script src="assets/js/menuburger.js"></script>
+  </body>
+</html>

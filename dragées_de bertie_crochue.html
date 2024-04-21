@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dragées de Bertie Crochue</title>
+    <link rel="stylesheet" href="assets/css/dragées_de bertie_crochue.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenu">
+        <nav id="nav">
+          <img
+            id="logosite"
+            src="assets/img/Harry logo.png"
+            alt="logo site harry potter"
+          />
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="collection.html">collection</a></li>
+            <li><a href="signin.html">booster</a></li>
+            <li><a href="signin.html">inscription</a></li>
+          </ul>
+          <div id="icons"></div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div id="drageeBox" onclick="showDragee()">
+        <img
+          src="assets/img/boite_bonbon.png"
+          alt="Boîte de dragées de Bertie Crochue"
+          class="box-image"
+        />
+        <!-- Assumez que l'image est déjà stylisée Harry Potter -->
+      </div>
+      <div id="dragee" style="display: none">
+        <div class="dragee"></div>
+        <button onclick="eatDragee()">Manger</button>
+        <button onclick="leaveDragee()">Laisser</button>
+      </div>
+    </div>
+    <script src="assets/js/dragées_de bertie_crochue.js"></script>
+  </body>
+</html>

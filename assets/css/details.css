@@ -1,0 +1,28 @@
+.card-template {
+  background-color: #4e342e;
+
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-title {
+  color: #ffd700;
+  font-family: "Cinzel", serif;
+  margin: 10px 0;
+}
+
+p {
+  color: #ffffff;
+  font-family: "Lora", serif;
+  line-height: 1.6;
+}

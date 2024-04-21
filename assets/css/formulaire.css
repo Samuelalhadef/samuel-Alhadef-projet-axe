@@ -1,0 +1,80 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  position: relative; /* Assure que le conteneur prend bien la taille désirée */
+  background-color: #0b0b22; /* Utilise la même couleur de fond que le reste du site */
+}
+
+.login-form {
+  width: 350px;
+  background: #46244c;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+.login-form:hover {
+  transform: scale(
+    1.03
+  ); /* Légère augmentation de taille au survol pour dynamisme */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9); /* Ombre encore plus marquée au survol */
+}
+
+.login-form h2 {
+  text-align: center;
+  color: #ffd700; /* Couleur dorée conservée pour l'élégance */
+  margin-bottom: 2rem;
+  font-size: 1.8em; /* Taille plus grande pour plus d'impact */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre sur le texte pour un effet de relief */
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1em; /* Texte légèrement plus grand pour améliorer la lisibilité */
+  color: #f4f4f9; /* Assurer que le texte est visible sur le fond sombre */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Ajout d'une petite ombre pour du relief */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #5a2a82; /* Bordure plus épaisse et plus colorée */
+  border-radius: 6px;
+  background: #fff;
+  transition: border-color 0.5s ease; /* Animation plus douce et plus visible */
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ffd700; /* Changement de couleur lors du focus pour un rappel doré élégant */
+  box-shadow: 0 0 8px #ffd700; /* Ajout d'une lueur externe pour un effet magique */
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2em; /* Augmentation de la taille de police pour un bouton plus impactant */
+  color: #fff;
+  background-color: #3e2723; /* Conservation de la couleur bois sombre des baguettes */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.2s; /* Transition plus douce et dynamique */
+}
+
+button:hover {
+  background-color: #5a2a82; /* Changement de couleur cohérent avec le style global */
+}
+
+button:active {
+  transform: translateY(
+    2px
+  ); /* Effet de pression plus rapide pour une sensation tactile */
+}

@@ -1,0 +1,83 @@
+.container {
+  text-align: center;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#drageeBox {
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dragee {
+  width: 50px; /* Taille initiale de la dragée */
+  height: 30px; /* Hauteur de la dragée */
+  background-color: #cccccc; /* Couleur initiale, changera avec JS */
+  border-radius: 50%; /* Rend la forme ovale */
+  transition: all 0.5s ease-in-out; /* Animation douce pour le changement de taille et de couleur */
+  transform: scale(0); /* Commence de zéro pour l'animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Position relative pour l'animation */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+  animation: popIn 0.5s ease-out forwards; /* Animation pour l'apparition */
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); /* Grossit pour remplir sa taille initiale */
+    opacity: 1;
+  }
+}
+
+#dragee {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin-top: 20px;
+  background-color: gold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #5a2a82;
+  transform: translateY(-5px);
+}

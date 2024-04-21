@@ -1,0 +1,90 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  background-color: #1a1a2e; /* Fond sombre pour une ambiance mystique */
+}
+
+#quiz-container {
+  text-align: center;
+  width: 80%;
+  padding: 20px;
+  background-color: #46244c; /* Couleur coordonnée avec les autres éléments de page */
+  border-radius: 20px; /* Bords arrondis pour un look doux et moderne */
+
+  animation: fadeIn 1s ease-out; /* Animation d'apparition progressive */
+}
+
+#olivander-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: talking 2s infinite;
+}
+
+@keyframes talking {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -5px
+    ); /* Léger mouvement vers le haut pour simuler la parole */
+  }
+}
+
+#question-bubble {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre plus subtile sans effet lumineux */
+}
+
+#answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.answer {
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.answer:hover {
+  background-color: #ccc;
+  transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translatey(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

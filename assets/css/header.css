@@ -1,0 +1,101 @@
+/* Reset CSS pour garantir la cohérence sur tous les navigateurs */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a2e; /* Fond plus doux que le noir pur */
+  color: #e5e5e5; /* Une couleur de texte qui contraste bien avec le fond */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Police moderne et lisible */
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: #e5e5e5; /* Gardons la couleur pour le contraste */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s; /* Transition douce pour le survol */
+}
+
+a:hover {
+  color: #fca311; /* Couleur chaleureuse au survol, rappelant les bougies de la Grande Salle */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5vw;
+  font-size: calc(0.5rem + 1.5vw);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+#logosite {
+  width: 30vw;
+}
+
+/* Responsive Design pour les appareils plus petits */
+@media (max-width: 1000px) {
+  #icons {
+    display: block;
+    color: #e5e5e5;
+    font-size: 30px;
+  }
+
+  #icons:before {
+    content: "\2630"; /* Symbole de menu */
+  }
+
+  .active #icons:before {
+    content: "\2715"; /* Symbole de fermeture */
+  }
+
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: #0f3460; /* Fond sombre pour le menu déroulant */
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s; /* Transition pour le menu déroulant */
+  }
+
+  nav li {
+    padding: 10px 0; /* Plus d'espace entre les liens */
+  }
+
+  nav li:hover {
+    background: #16213e; /* Changement de fond au survol */
+  }
+
+  nav.active ul {
+    left: 0; /* Animation pour faire apparaître le menu */
+  }
+
+  .btn-toggle {
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 80px;
+    color: brown;
+  }
+}

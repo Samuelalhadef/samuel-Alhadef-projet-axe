@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur des écrans plus petits */
+  justify-content: center; /* Centre les cartes horizontalement */
+  gap: 40px; /* Espacement entre les cartes */
+  margin-top: 20px; /* Espacement au-dessus du conteneur de cartes */
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  margin: 20px; /* Ajuste pour permettre un espacement uniforme autour des cartes */
+  width: 350px; /* Largeur fixe pour chaque carte */
+  height: 450px; /* Hauteur fixe pour chaque carte */
+  background-color: #4e342e;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.75);
+  clip-path: polygon(50% 0%, 100% 40%, 75% 150%, 25% 150%, 0% 40%);
+  display: flex;
+  flex-direction: column; /* Organise les éléments de la carte en colonne */
+  align-items: center; /* Centre les éléments horizontalement dans la carte */
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 5px solid #ffd700; /* Bordure dorée */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    75% 100%,
+    25% 100%,
+    0% 25%
+  ); /* Réplication de la forme pentagonale */
+}
+
+.card img {
+  margin-top: 100%;
+  width: 50%;
+  height: auto; /* Pour conserver les proportions */
+  border-radius: 10px 10px 0 0;
+  margin: -10% auto 0; /* Centrer l'image et la monter un peu */
+
+  display: block;
+
+  min-height: 380px;
+  object-fit: contain;
+}
+
+.card h2,
+.card p {
+  color: #ffd700; /* Texte doré pour contraster avec le fond */
+}
+
+.card h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  font-style: italic;
+}
+
+.card-details-link {
+  text-align: center;
+  font-style: center;
+  z-index: 5; /* Assure que le lien est au-dessus des autres éléments */
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+#generateButton {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #001c3b;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#generateButton:hover {
+  background-color: #3b75bb;
+}
+
+#generateButton:active {
+  transform: translateY(2px);
+}
+
+#generateButton:focus {
+  outline: none;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #4a90e2;
+  }
+  50% {
+    box-shadow: 0 0 20px #4a90e2;
+  }
+  100% {
+    box-shadow: 0 0 10px #4a90e2;
+  }
+}
+
+#generateButton:focus {
+  animation: glow 1.5s infinite alternate;
+}

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Papyrus", fantasy; /* Police à thème Harry Potter */
+  background-color: #1a1a2e; /* Fond sombre pour une ambiance mystique */
+  color: #fca311; /* Texte doré pour une touche magique */
+  text-align: center;
+}
+
+a {
+  color: #fca311; /* Couleur dorée pour rappeler les bougies de la Grande Salle */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Header et navigation */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Hero section */
+#hero {
+  text-align: center;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#hero h1 {
+  margin-bottom: 20px;
+}
+
+#hero p {
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  background-color: #46244c;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #5a2a82;
+  transform: scale(1.05);
+}
+
+/* Interactive links containers */
+.interactive-links-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.interactive-links-container a {
+  display: inline-block;
+  background-color: #46244c;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.interactive-links-container a:hover {
+  background-color: #5a2a82;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.interactive-links-container img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.interactive-links-container a:hover img {
+  transform: scale(1.2);
+}
+
+/* Sections About, Features, Contact */
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  background-color: #0f3460;
+  color: #ffffff;
+}
+
+/* Form styling for contact forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+button {
+  background-color: #fca311;
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffcd56;
+}
